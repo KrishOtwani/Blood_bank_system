@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+    <header>
+        <h1>Blood Bank Management System</h1>
+        <!-- Add login form here -->
+    </header>
+
+    <main>
+        <div class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="blood-groups">
+                <div class="blood-group">
+                    <h3>Blood Group A</h3>
+                    <p>Available: <span id="blood-group-a">0</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group B</h3>
+                    <p>Available: <span id="blood-group-b">0</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group AB</h3>
+                    <p>Available: <span id="blood-group-ab">0</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group O</h3>
+                    <p>Available: <span id="blood-group-o">0</span></p>
+                </div>
+                <!-- Add more blood groups as needed -->
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="donate-form">Donate Blood</button>
+            <button id="receive-form">Receive Blood</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blood Bank Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="donate.js"></script>
+    <script src="receive.js"></script>
+
+</body>
+</html>

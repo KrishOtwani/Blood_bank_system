@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank Management System</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here -->
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/styles.css')}}"> <!-- Link your CSS file here -->
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/script.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/donate.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/receive.js')}}"></script>
+
 </head>
 <body>
     <header>
@@ -46,9 +50,7 @@
         <p>&copy; 2024 Blood Bank Management System</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="donate.js"></script>
-    <script src="receive.js"></script>
+    
 
 </body>
 </html>

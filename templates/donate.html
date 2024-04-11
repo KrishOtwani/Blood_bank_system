@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Blood</title>
     <link rel="stylesheet" href="{{ url_for ('static', filename='css/styles.css')}}"> <!-- Link your CSS file here -->
-    <script src="donate.js"></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/script.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/donate.js')}}"></script>
+
 </head>
 <body>
     <header>
@@ -35,8 +37,6 @@
         <p>&copy; 2024 Blood Bank Management System</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="donate.js"></script>
     
 
 </body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/styles2.css')}}"> <!-- Link your CSS file here -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for ('static', filename='css/images/pixelcut-export.png')}}" style="height:100px;width:100px;" >
+        </div>
+
+        <div class="title">
+                <h1>Blood Bank Management System</h1>
+        </div>
+        <!-- Add login form here -->
+    </header>
+
+    <main>
+        <div class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="blood-groups" >
+                <div class="blood-group">
+                    <h3>Blood Group A+</h3>
+                    <p>Available: <span id="blood-group-a-plus">{{ num_rows[0] }}</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group A-</h3>
+                    <p>Available: <span id="blood-group-a-minus">{{ num_rows[1] }}</span></p>   
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group B+</h3>
+                    <p>Available: <span id="blood-group-b-plus">{{ num_rows[2] }}</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group B-</h3>
+                    <p>Available: <span id="blood-group-b-minus">{{ num_rows[3] }}</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group AB+</h3>
+                    <p>Available: <span id="blood-group-ab-plus">{{ num_rows[4] }}</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group AB-</h3>
+                    <p>Available: <span id="blood-group-ab-minus">{{ num_rows[5] }}</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group O+</h3>
+                    <p>Available: <span id="blood-group-o-plus">{{ num_rows[6] }}</span></p>
+                </div>
+                <div class="blood-group">
+                    <h3>Blood Group O-</h3>
+                    <p>Available: <span id="blood-group-o-minus">{{ num_rows[7] }}</span></p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="donate-btn" onclick="window.location.href='/donate'">Donor</button>
+            <button id="receive-btn" onclick="window.location.href='/receive'">Receiver</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blood Bank Management System</p>
+    </footer>
+
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/script.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/donate.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for ('static', filename='js/receive.js')}}"></script>
+
+</body>
+</html>

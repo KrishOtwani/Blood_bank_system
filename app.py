@@ -74,7 +74,7 @@ def donate():
         units = request.form['units']
         blood_group = request.form['blood-group']
         new_task = Track(type=blood_group, units=units)
-        print("hi")
+        
         # units = request.form['units']
         # new_task = track(units=units)
 
@@ -94,7 +94,43 @@ def donate():
 
 @app.route('/receive', methods=["POST","GET"])
 def receive():
-    return render_template('receive2.html')
+    
+    
+    if request.method == "POST":   
+        print("hiiiii")
+        units = int(request.form['units'])
+        print(units)
+    
+        negunits = -units
+        print(negunits)
+
+        blood_group = request.form['blood-group']
+        new_task = Track(type=blood_group, units=negunits)
+        if units==None:
+            print("hehehehe")
+        print("hi", units)
+        # units = request.form['units']
+        # new_task = track(units=units)
+        # blood_record = Track.query.filter_by(b_group=blood_group).first()
+
+        # if blood_record:
+        #     # Add the negative units to the existing units in the database
+        #     blood_record.units -= units
+                
+        #     db.session.commit()
+        #     return redirect('/')
+        
+        try:
+            db.session.add(new_task)
+            db.session.commit()
+            return redirect('/') 
+        
+        except Exception as e:
+            print(f"Error:{e}")
+            return f'Error:{e}'
+        
+    if request.method == "GET":
+        return render_template('receive2.html')
 
 
 @app.route('/view_tracks', methods = ["POST","GET"])

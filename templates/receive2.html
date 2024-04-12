@@ -26,9 +26,9 @@
 
     <main>
         <div class="form-card">
-            <form id="receive-form">
+            <form action="/donate" id="receive-form" method="post">
                 <label for="blood-group" style="font-size: 20px;">Blood Group:</label>
-                <select id="blood-group">
+                <select id="blood-group" name="blood-group">
                     <option value="A+">A+</option>
                     <option value="A-">A-</option>
                     <option value="B+">B+</option>
@@ -42,11 +42,11 @@
                 <br><br>
 
                 <label for="units" style="font-size: 20px;">Units:</label>
-                <input type="number" id="units" min="1" value="1" required>
+                <input type="number" name="units" id="units" min="1" value="1" required>
 
                 <br><br>
 
-                <button type="submit" style="font-size: 20px;">Submit</button>
+                <button type="submit" value="Submit" style="font-size: 20px;">Submit</button>
             </form>
         </div>
     </main>

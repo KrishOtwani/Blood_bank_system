@@ -9,6 +9,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 db = SQLAlchemy(app)
 
+
 class Track(db.Model):
     """A Model for an Item in the Todo List
 
@@ -25,6 +26,9 @@ class Track(db.Model):
     
     # def __repr__(self):
     #     return f'<Task {self.id}'
+
+with app.app_context():
+    db.create_all()
 
 
 @app.route('/', methods=["POST","GET"])

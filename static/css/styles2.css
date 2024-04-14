@@ -65,6 +65,12 @@ footer {
 
 .blood-group h3 {
     margin-top: 0;
+    font-size: 23px;
+
+}
+
+.blood-group p{
+    font-size: 20px;
 }
 
 .actions {

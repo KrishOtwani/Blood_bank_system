@@ -17,6 +17,12 @@
             max-width: 400px;
             opacity: 0.9;
         }
+
+        select#blood-group {
+            height: 40px;
+            width: 80px;
+        }
+
     </style>
 </head>
 <body>
@@ -27,8 +33,8 @@
     <main>
         <div class="form-card">
             <form action="/donate" id="donate-form" method="post">
-                <label for="blood-group" name="blood-group" style="font-size: 20px;">Blood Group:</label>
-                <select id="blood-group" name="blood-group">
+                <label for="blood-group" name="blood-group" style="font-size: 25px;">Blood Group:</label>
+                <select id="blood-group" name="blood-group" >
                     <option value="A+">A+</option>
                     <option value="A-">A-</option>
                     <option value="B+">B+</option>
